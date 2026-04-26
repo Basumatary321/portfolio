@@ -35,20 +35,24 @@ img {
 
 /* NAME */
 .name{
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(1.3rem, 4vw, 2.5rem);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 800;
-    word-break: break-word;
+    color: var(--primary);
+    font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .prof{
     font-size: clamp(0.8rem, 2vw, 1.2rem);
+    color: var(--secondary);
 }
 .period{
-    font-size: 12px;
+    font-size: clamp(0.6rem, 2vw, 1rem);
     color: var(--accent);
-    background: var(--light);
+    font-weight: 700;
     padding: 2px 8px;
     border-radius: 4px;
 }
@@ -70,18 +74,19 @@ img {
     display: flex;
     align-items: center;
     gap: 25px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     border-bottom: 2px solid var(--light);
     flex-wrap: wrap; /* 🔥 prevents overflow */
 }
 
 .profile-img {
-    width: 120px;
+    width: 150px;
     height: 120px;
-    border-radius: 20%;
     object-fit: cover;
-    border: 4px solid var(--primary);
+    filter: drop-shadow(5px -5px 10px rgba(14, 14, 14, 0.466));
+    /* border-bottom: 1px solid blue; */
 }
+
 
 /* CONTACT */
 .contact{
@@ -105,24 +110,14 @@ img {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
-/* HEADINGS */
-h2 {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--primary);
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
 .title{
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(0.8rem, 2.5vw, 1.5rem);
     font-weight: 600;
-    margin-bottom: 20px;
+    margin: 20px 0 10px; 
+      color: var(--primary);
 }
 
 /* TIMELINE */
@@ -138,7 +133,7 @@ h2 {
     padding-left: 20px;
     position: relative;
     word-break: break-word;
-    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    font-size: clamp(0.6rem, 2vw, 1.1rem);
 }
 
 .timeline li::before {
@@ -153,7 +148,7 @@ h2 {
 }
 
 .timeline-date {
-    font-size: 12px;
+    font-size: clamp(0.6rem, 2vw, 1rem);
     font-weight: bold;
     color: #94a3b8;
 }
@@ -193,7 +188,7 @@ h2 {
     list-style: square;
     line-height: 1.5;
     width: 100%; /* 🔥 FIXED */
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-size: clamp(0.6rem, 2vw, 1rem);
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -208,7 +203,7 @@ h2 {
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 18px;
+    font-size: clamp(0.6rem, 2vw, 1.2rem);
 }
 
 /* TECHNOLOGY */
@@ -227,7 +222,7 @@ h2 {
 
 /* DEMO */
 .demo{
-    font-size: 12px;
+    font-size: clamp(0.6rem, 2vw, 1rem);
     color: var(--accent);
     margin-left: 10px;
     float: right;
@@ -237,7 +232,7 @@ h2 {
     align-items: center;
     gap: 8px;
     margin: 6px 0;
-    font-size: 14px;
+    font-size: clamp(0.6rem, 2vw, 1rem);
 }
 
 .contact i {
@@ -252,21 +247,22 @@ h2 {
     color: var(--secondary);
     text-decoration: underline;
 }
-/* ================= MOBILE ================= */
+
+footer p {
+    font-size: clamp(0.6rem, 2vw, 1rem);
+    color: #94a3b8;
+}
+
 @media (max-width: 768px) {
     body{
         padding: 10px;
     }
-.period{
-    display: none;
-}
     .details-section {
-        grid-template-columns: 1fr;
-    }
+    grid-template-columns: 3fr 2fr;
+    gap: 5px;
+}
 
     .profile-header {
-        flex-direction: column;
-        text-align: center;
         gap: 5px;
     }
 
@@ -274,10 +270,24 @@ h2 {
         width: 90px;
         height: 90px;
     }
-
+.timeline li {
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+.timeline li::before {
+    width: 10px;
+    height: 10px;
+}
+.skill-summary li{
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
     .contact{
         margin:0;
         text-align: center;
+    }
+    .title{
+       margin: 10px 0 10px; ;
     }
 
     .contact p {
@@ -285,19 +295,16 @@ h2 {
         font-size: 12px;
     }
 
-    /* 🔥 VERY IMPORTANT (fix hover overflow) */
     .project-item:hover {
         transform: none;
     }
-
-    /* Fix demo float on small screen */
     .demo {
         float: none;
         display: block;
         margin-bottom: 5px;
     }
     .technology img {
-        width: 30px;
-        height: 30px;
+        width: 20px;
+        height: 20px;
     }
 }

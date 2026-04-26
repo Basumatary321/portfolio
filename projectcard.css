@@ -42,15 +42,14 @@
 /* TITLE ALWAYS VISIBLE */
 .project-content h2 {
     margin: 0;
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-size: clamp(0.7rem, 2vw, 1.2rem);
     color: white;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* font-weight: bold; */
 }
 
 /* DESCRIPTION */
-.project-content p {
-    font-size: clamp(0.7rem, 1.5vw, 1rem);
+.project-content p{
+    font-size: clamp(0.6rem, 2vw, 1rem);
     margin-top: 8px;
     opacity: 0;
     transition: 0.3s ease;
@@ -70,7 +69,7 @@
 
 .slide-btn {
     padding: 6px 12px;
-    font-size: 12px;
+    font-size:clamp(0.6rem, 2vw, 1rem);
     /* background: var(--primary); */
     border-bottom: 2px solid var(--primary);
     color: #fff;
@@ -80,7 +79,7 @@
 }
 
 .slide-btn:hover {
-    background: var(--secondary);
+    background: rgba(100, 171, 219, 0.527);
 }
 
 .slide-btn:hover::after {
@@ -92,12 +91,7 @@
     width: 100%;
     overflow: hidden; 
     padding: 2rem 0;
-    
-  
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
-
 
 .marquee-inner {
     display: flex;
@@ -167,17 +161,19 @@
 }
 
 .icon {
-    font-size: 40px;
-    margin-bottom: 15px;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: 3px;
 }
 
 .service-card h3 {
-    margin-bottom: 10px;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 0;
+    font-size: clamp(0.7rem, 2vw, 1.5rem);
+    color: var(--primary);
+    font-weight: 600;
 }
 
 .service-card p {
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-size: clamp(0.6rem, 2vw, 1rem);
     color: #222e55;
 }
 
@@ -189,9 +185,11 @@
     .projects-list {
         padding: 0px 0;
     }
-   
-    .project-content p{
-        font-size: 14px;
+    .project-card{
+        min-width: 180px;
+    }
+    .project-content,.project-card, .project-card img{
+        height: 150px;
     }
     .services-container {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -203,4 +201,4 @@
 .marquee-container {
     padding:0;
 
-}
+}}
