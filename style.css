@@ -84,7 +84,7 @@ body {
 }
 
 .profile-img {
-    background: url('/images/profile1.png');
+    background: url('images/profile1.png');
     background-size: contain;
     background-position: bottom center;
     background-repeat: no-repeat;
