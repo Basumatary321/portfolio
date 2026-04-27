@@ -72,7 +72,7 @@ body {
 
 /* HEADER */
 .profile-header {
-    background:linear-gradient(to right, #faefefbe, rgb(229, 255, 253));
+    background:linear-gradient(to right, #ffffffbe, rgb(229, 255, 253));
     display: flex;
     align-items: end;
     flex-direction: row;
@@ -85,7 +85,7 @@ body {
 
 .profile-img {
     background: url('images/profile3.png');
-    background-size: 80% auto;
+    background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
     width: 150px;
