@@ -27,11 +27,7 @@ body {
     padding: 30px;
 }
 
-/* SAFE IMAGES */
-img {
-    max-width: 100%;
-    height: auto;
-}
+
 
 /* NAME */
 .name{
@@ -49,12 +45,17 @@ img {
     font-size: clamp(0.8rem, 2vw, 1.2rem);
     color: var(--secondary);
 }
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+     gap: 0px;
+}
 .period{
     font-size: clamp(0.6rem, 2vw, 1rem);
-    color: var(--accent);
-    font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 4px;
+    color: var(--primary);
+    font-weight: 600;
 }
 
 .container {
@@ -71,37 +72,57 @@ img {
 
 /* HEADER */
 .profile-header {
+    background:linear-gradient(to right, #faefefbe, rgb(229, 255, 253));
     display: flex;
-    align-items: center;
+    align-items: end;
+    flex-direction: row;
     gap: 25px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--light);
-    flex-wrap: wrap; /* 🔥 prevents overflow */
+   padding: 6px;
+   border-radius: 12px;
+    /* border-bottom: 2px solid var(--light); */
+    flex-wrap: nowrap; /* 🔥 prevents overflow */
 }
 
 .profile-img {
+    background: url('/images/profile1.png');
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
     width: 150px;
     height: 120px;
     object-fit: cover;
-    filter: drop-shadow(5px -5px 10px rgba(14, 14, 14, 0.466));
-    /* border-bottom: 1px solid blue; */
+    filter: drop-shadow(0px -5px 10px rgba(21, 239, 255, 0.384));
+    border: 1px solid rgb(199, 235, 236);
+    border-radius: 10px;
 }
 
 
+.right{
+    /* background-color: #1e293b; */
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* gap: 5px; */
+}
 /* CONTACT */
 .contact{
     margin-left: auto;
     text-align: left;
     max-width: 100%;
+    padding: 0;
 }
 
 .contact p {
     word-break: break-word;
+    padding: 0;
 }
 
 .contact a {
+    padding: 0;
     color: var(--primary);
     text-decoration: none;
+    font-size: clamp(0.6rem, 2vw, 1rem);
     word-break: break-all; /* 🔥 fixes long links */
 }
 
@@ -219,7 +240,10 @@ img {
     height: 40px;
     object-fit: contain;
 }
-
+.technology img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
 /* DEMO */
 .demo{
     font-size: clamp(0.6rem, 2vw, 1rem);
@@ -263,12 +287,22 @@ footer p {
 }
 
     .profile-header {
-        gap: 5px;
+        flex-direction: row;
+        /* justify-content: flex-start; */
+        align-items: end;
+        gap: 10px;
     }
-
+.right{
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+     gap: 0px;
+}
     .profile-img {
+        background-size: auto 100%;
         width: 90px;
-        height: 90px;
+        height: 135px;
     }
 .timeline li {
     margin-bottom: 5px;
@@ -278,20 +312,23 @@ footer p {
     width: 10px;
     height: 10px;
 }
+
 .skill-summary li{
     line-height: 1.2;
     margin-bottom: 5px;
 }
     .contact{
         margin:0;
-        text-align: center;
+      display: flex;
+        flex-direction: column;
+        align-items: left;
     }
     .title{
        margin: 10px 0 10px; ;
     }
 
     .contact p {
-        margin: 2px 0;
+        margin: 1px 0;
         font-size: 12px;
     }
 

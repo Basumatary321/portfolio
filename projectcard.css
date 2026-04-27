@@ -68,10 +68,10 @@
 }
 
 .slide-btn {
-    padding: 6px 12px;
-    font-size:clamp(0.6rem, 2vw, 1rem);
+    padding: 2px 6px;
+    font-size:clamp(0.5rem, 2vw, 0.8rem);
     /* background: var(--primary); */
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
@@ -152,7 +152,7 @@
     padding: 25px;
     border-radius: 15px;
     transition: 0.3s ease;
-    box-shadow: 0 5px 18px 0px rgba(155, 155, 155, 0.2);
+    box-shadow: 0 5px 18px 0px rgba(192, 191, 191, 0.2);
 }
 
 .service-card:hover {
@@ -189,7 +189,7 @@
         min-width: 180px;
     }
     .project-content,.project-card, .project-card img{
-        height: 150px;
+        height: 130px;
     }
     .services-container {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
